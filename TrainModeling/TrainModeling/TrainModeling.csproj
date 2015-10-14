@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net-1.2.13\bin\net\4.0\release\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,12 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base.cs" />
+    <Compile Include="Component.cs" />
+    <Compile Include="IComposite.cs" />
+    <Compile Include="Coordinate.cs" />
+    <Compile Include="IComponent.cs" />
     <Compile Include="IMovingStrategy.cs" />
     <Compile Include="IRoad.cs" />
     <Compile Include="IVehicle.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Road.cs" />
     <Compile Include="SimpleTrainMovingStrategy.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>

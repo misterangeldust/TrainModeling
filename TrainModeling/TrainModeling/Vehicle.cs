@@ -1,6 +1,8 @@
-﻿namespace TrainModeling
+﻿using System;
+
+namespace TrainModeling
 {
-	public class Vehicle : IVehicle
+	public class Vehicle : Base, IVehicle
 	{
 		private IMovingStrategy _movingStrategy;
 
