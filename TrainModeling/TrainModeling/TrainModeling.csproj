@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="UML\Model.oob" />
+    <None Include="UML\Model.oom" />
+    <None Include="UML\Workspace.sws" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
