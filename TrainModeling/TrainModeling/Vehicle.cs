@@ -20,6 +20,7 @@ namespace TrainModeling
 			if (_movingStrategy == null) return false;
 			return _movingStrategy.Start();
 		}
+		
 
 		public bool StopMoving()
 		{
