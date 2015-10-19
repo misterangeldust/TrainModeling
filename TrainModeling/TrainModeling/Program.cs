@@ -17,14 +17,12 @@ namespace TrainModeling
 		{
 			// Set up a simple configuration that logs on the console.
 			BasicConfigurator.Configure();
-			Vehicle v=new Vehicle();
-			Position pos = new Position {ValueCoordinate = new Coordinate {X = 0, Y = 0}};
+			Vehicle v=new SimpleTrain();
+			Position pos = new Position {ValueCoordinate = new Coordinate (new []{0, 0})};
 			v.Position = pos;
 			IMovingStrategy ms=new SimpleTrainMovingStrategy(v);
 			v.MovingStrategy = ms;
-			Task t=new Task(() => v.StartMoving());
-			t.Start();
-
+			v.StartMoving();
 			Thread.Sleep(10000);
 			v.StopMoving();
 			Console.Read();

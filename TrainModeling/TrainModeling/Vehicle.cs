@@ -6,12 +6,18 @@ namespace TrainModeling
 	{
 		private IMovingStrategy _movingStrategy;
 
+
 		public IMovingStrategy MovingStrategy
 		{
 			protected get { return _movingStrategy; }
 			set { _movingStrategy = value; }
 		}
 
+
+		public int Weight { get; set; }
+		public int TractionForce { get; set; }
+		public double Speed { get; set; }
+		public double MaxSpeed { get; set; }
 
 		public Position Position { get; set; }
 
