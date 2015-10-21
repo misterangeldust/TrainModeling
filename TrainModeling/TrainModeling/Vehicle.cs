@@ -2,7 +2,7 @@
 
 namespace TrainModeling
 {
-	public class Vehicle : Base, IVehicle
+	public abstract class Vehicle : Base, IVehicle
 	{
 		private IMovingStrategy _movingStrategy;
 
@@ -14,10 +14,10 @@ namespace TrainModeling
 		}
 
 
-		public int Weight { get; set; }
-		public int TractionForce { get; set; }
-		public double Speed { get; set; }
-		public double MaxSpeed { get; set; }
+		public abstract int Weight { get; set; }
+		public abstract int TractionForce { get; set; }
+		public abstract double Speed { get; set; }
+		public abstract double MaxSpeed { get; set; }
 
 		public Position Position { get; set; }
 
