@@ -1,8 +1,11 @@
-﻿namespace TrainModeling
+﻿using System.Drawing;
+
+namespace TrainModeling
 {
 	public interface IRoad
 	{
-		Coordinate GetCoordinateBegin();
-		Coordinate GetCoordinate(int distance);
+		Point GetPointBegin();
+		Point GetPointEnd();
+		Point GetCoordinate(double distance);
 	}
 }

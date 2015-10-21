@@ -41,8 +41,6 @@ namespace TrainModeling
 
 		private void Accelerate(object sender, ElapsedEventArgs elapsedEventArgs)
 		{
-//			lock (_vehicle)
-//			{
 				double v = _vehicle.Speed;
 				_vehicle.Speed = v + ((double)_vehicle.TractionForce/ (double)_vehicle.Weight)*_interval/1000;
 				_vehicle.Position.ValueCoordinate.X += ((int) v*_interval) +
@@ -53,7 +51,6 @@ namespace TrainModeling
 				{
 					_timer.Elapsed -= Accelerate;
 				}
-//			}
 		}
 
 		private void SlowDown(object sender, ElapsedEventArgs elapsedEventArgs)
